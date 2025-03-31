@@ -9,15 +9,15 @@ export default function Ehime() {
         {
           title: "梅津寺站看夕陽",
           images: [
-            "/images/ehime/ehime-beach.jpeg",
-            "/images/ehime/ehime-station.gif",
+            "./images/ehime/ehime-beach.jpeg",
+            "./images/ehime/ehime-station.gif",
           ],
           description: "從月台看出去剛好黃昏，很寧靜。推薦一定要來拍照！",
         },
         {
           title: "高島屋摩天輪",
           images: [
-            "/images/ehime/ehime-wheel.jpeg",
+            "./images/ehime/ehime-wheel.jpeg",
           ],
           description: "可以眺望整個松山市區的夜景，很漂亮！",
         },
@@ -30,19 +30,19 @@ export default function Ehime() {
           title: "道後溫泉本館",
           images: [
             {
-              src: "/images/ehime/ehime-onsen1.jpeg",
+              src: "./images/ehime/ehime-onsen1.jpeg",
               position: "bottom"
             },
             {
-              src: "/images/ehime/ehime-onsen2.jpeg",
+              src: "./images/ehime/ehime-onsen2.jpeg",
               position: "bottom"
             },
             {
-              src: "/images/ehime/ehime-onsen3.jpeg",
+              src: "./images/ehime/ehime-onsen3.jpeg",
               position: "bottom"
             },
             {
-              src: "/images/ehime/ehime-onsen4.jpeg",
+              src: "./images/ehime/ehime-onsen4.jpeg",
               position: "center"
             },
           ],
@@ -50,7 +50,7 @@ export default function Ehime() {
         },
         {
           title: "松山城纜車",
-          image: "/images/ehime-cable.jpg",
+          image: "./images/ehime-cable.jpg",
           description: "從上面可以眺望整座城市與遠方大海～",
         },
       ],
@@ -62,7 +62,7 @@ export default function Ehime() {
       <div className="max-w-6xl mx-auto pt-5 grid grid-cols-1 md:grid-cols-12 gap-10 md:items-end">
         <div className="md:col-span-5">
           <img
-            src="/images/ehime/ehime-cable.jpeg"
+            src="./images/ehime/ehime-cable.jpeg"
             alt="Ehime lift view"
             className="rounded-lg shadow-md w-full h-full max-h-[500px] object-cover object-center"
           />

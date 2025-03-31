@@ -1,8 +1,8 @@
 {
-  "name": "shikoku-react-full",
+  "homepage": "https://codyruan.github.io/my-shikoku-trip",
+  "name": "my-shikoku-trip",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://codyruan.github.io/my-shikoku-trip",
   "dependencies": {
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.485.0",

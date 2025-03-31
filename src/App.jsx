@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Takamatsu from "./pages/Takamatsu";
@@ -8,7 +8,7 @@ import Food from "./pages/Food";
 
 function App() {
   return (
-    <BrowserRouter basename="/my-shikoku-trip">
+    <HashRouter>
       <Routes>
         {/* 整站通用 Layout */}
         <Route element={<Layout />}>
@@ -19,7 +19,7 @@ function App() {
           <Route path="/food" element={<Food />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

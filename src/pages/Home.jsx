@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 const navCards = [
   {
     name: "Takamatsu",
-    image: "/images/nav-takamatsu.jpeg",
+    image: "./images/nav-takamatsu.jpeg",
     link: "/takamatsu",
   },
   {
     name: "Tokushima",
-    image: "/images/nav-tokushima.jpeg",
+    image: "./images/nav-tokushima.jpeg",
     link: "/tokushima",
   },
   {
     name: "Ehime",
-    image: "/images/nav-ehime.jpeg",
+    image: "./images/nav-ehime.jpeg",
     link: "/ehime",
   },
 ];
@@ -25,7 +25,7 @@ export default function Home() {
       <Banner
         title="SHIKOKU"
         subtitle="沒有驚喜萬分，卻讓人難以忘懷。"
-        imageUrl="/images/home-banner.jpeg"
+        imageUrl="./images/home-banner.jpeg"
       />
 
       <div className="max-w-5xl mx-auto px-4 mt-6 space-y-4 text-gray-700 text-center font-serif">

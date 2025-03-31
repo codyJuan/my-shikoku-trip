@@ -8,7 +8,7 @@ export default function Takamatsu() {
       <CityIntro
         title="About Takamatsu"
         subtitle="高松市"
-        imageSrc="/images/takamatsu/takamatsu-ferry.jpeg"
+        imageSrc="./images/takamatsu/takamatsu-ferry.jpeg"
         imageAlt="Takamatsu ferry"
         paragraphs={[
           "高松，是一座被烏龍麵香氣輕輕包圍的城市。無論是清晨的熱湯烏龍、午後的冷麵，或是回國前匆忙吃下的最後一碗沾麵，每一口都像是在嚐四國的日常。",

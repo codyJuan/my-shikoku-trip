@@ -7,7 +7,7 @@ export default function Takamatsu() {
       {/* 城市介紹區塊 */}
       <CityIntro
         title="About Takamatsu"
-        subtitle="高松市"
+        subtitle="香川縣 高松市"
         imageSrc="./images/takamatsu/takamatsu-ferry.jpeg"
         imageAlt="Takamatsu ferry"
         paragraphs={[

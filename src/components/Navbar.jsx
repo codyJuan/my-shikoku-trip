@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Takamatsu", path: "/takamatsu" },
   { label: "Tokushima", path: "/tokushima" },
-  { label: "Ehime", path: "/ehime" },
+  { label: "Matsuyama", path: "/matsuyama" },
   { label: "Food", path: "/food" },
 ];
 

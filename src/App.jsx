@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Takamatsu from "./pages/Takamatsu";
 import Tokushima from "./pages/Tokushima";
-import Ehime from "./pages/Ehime";
+import Matsuyama from "./pages/Matsuyama";
 import Food from "./pages/Food";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/takamatsu" element={<Takamatsu />} />
           <Route path="/tokushima" element={<Tokushima />} />
-          <Route path="/ehime" element={<Ehime />} />
+          <Route path="/matsuyama" element={<Matsuyama />} />
           <Route path="/food" element={<Food />} />
         </Route>
       </Routes>

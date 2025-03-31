@@ -36,7 +36,7 @@ export default function Ehime() {
     <div className="bg-[#fdf6ef] py-12 px-4 font-serif">
       <CityIntro
         title="About Tokushima"
-        subtitle="德島縣"
+        subtitle="德島縣 徳島市"
         imageSrc="./images/tokushima/tokushima-bridge.jpeg"
         imageAlt="Naruto Bridge"
         paragraphs={[

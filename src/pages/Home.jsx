@@ -13,9 +13,9 @@ const navCards = [
     link: "/tokushima",
   },
   {
-    name: "Ehime",
-    image: "./images/nav-ehime.jpeg",
-    link: "/ehime",
+    name: "Matsuyama",
+    image: "./images/nav-matsuyama.jpeg",
+    link: "/matsuyama",
   },
 ];
 

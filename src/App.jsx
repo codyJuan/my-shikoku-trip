@@ -8,7 +8,7 @@ import Food from "./pages/Food";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/my-shikoku-trip">
       <Routes>
         {/* 整站通用 Layout */}
         <Route element={<Layout />}>

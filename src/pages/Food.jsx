@@ -2,7 +2,9 @@ import { useState } from "react";
 import foodData from "../data/foodData";
 import { useKeenSlider } from "keen-slider/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Lightbox from "yet-another-react-lightbox";
 import "keen-slider/keen-slider.min.css";
+import "yet-another-react-lightbox/styles.css";
 
 // 類別限定
 const categories = ["全部", "拉麵", "烏龍麵", "冰品", "其他"];
@@ -27,12 +29,12 @@ export default function Food() {
       <h1 className="text-3xl font-bold mb-6">🍽️ 四國美食總覽</h1>
 
       {/* 分類切換 */}
-      <div className="flex flex-wrap gap-3 mb-6">
+      <div className="flex overflow-x-auto whitespace-nowrap gap-3 mb-6 pb-1">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setSelected(cat)}
-            className={`px-4 py-1 rounded-full border ${
+            className={`px-4 py-1 rounded-full border shrink-0 ${
               selected === cat
                 ? "bg-[#504339] text-white"
                 : "text-[#504339] border-[#ccc]"
@@ -54,44 +56,41 @@ export default function Food() {
 }
 
 function FoodCard({ food }) {
-  const hasMultipleImages = food.images?.length > 1;
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
-    slides: {
-      perView: 1,
-      spacing: 10,
-    },
+    slides: { perView: 1, spacing: 10 },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
   });
 
+  const parsedImages = (food.images || [food.image]).map((img) =>
+    typeof img === "string" ? { src: img } : img
+  );
+  const hasMultipleImages = parsedImages.length > 1;
+
   return (
-    <div className="relative bg-white p-4 rounded-xl shadow">
+    <div className="relative bg-white p-4 rounded-xl shadow overflow-hidden">
       <div className="relative">
         <span className="absolute -top-3 -right-3 z-10 bg-white/90 text-xs px-3 py-1 rounded-full text-gray-700 shadow">
           {typeMap[food.displayType] || "🍴"} {food.displayType}
         </span>
 
         <div ref={sliderRef} className="keen-slider overflow-hidden rounded">
-          {(food.images || [food.image]).map((imgObj, idx) => {
-            const src = typeof imgObj === "string" ? imgObj : imgObj.src;
-            const pos = typeof imgObj === "string" ? (food.imagePositionPercent ?? 50) : (imgObj.position ?? 50);
-            return (
-              <div key={idx} className="keen-slider__slide">
-                <img
-                  src={src}
-                  alt={`${food.name} ${idx + 1}`}
-                  className="w-full h-40 object-cover"
-                  style={{
-                    objectPosition: `center ${100 - pos}%`,
-                  }}
-                />
-              </div>
-            );
-          })}
+          {parsedImages.map((img, idx) => (
+            <div key={idx} className="keen-slider__slide">
+              <img
+                src={img.src}
+                alt={`${food.name} ${idx + 1}`}
+                className="w-full h-48 sm:h-40 object-cover cursor-pointer"
+                style={{ objectPosition: `center ${100 - (img.position ?? 50)}%` }}
+                onClick={() => setLightboxOpen(true)}
+              />
+            </div>
+          ))}
         </div>
 
         {hasMultipleImages && (
@@ -109,7 +108,7 @@ function FoodCard({ food }) {
               <ChevronRight size={20} />
             </button>
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
-              {(food.images || [food.image]).map((_, i) => (
+              {parsedImages.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => instanceRef.current?.moveToIdx(i)}
@@ -122,6 +121,13 @@ function FoodCard({ food }) {
           </>
         )}
       </div>
+
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        index={currentSlide}
+        slides={parsedImages.map((img) => ({ src: img.src }))}
+      />
 
       <h3 className="mt-2 text-lg font-semibold">{food.name}</h3>
       <p className="text-sm text-gray-600 mb-1">{food.description}</p>

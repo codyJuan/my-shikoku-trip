@@ -15,22 +15,21 @@ export default function ShikokuMap() {
     香川県: "#F4A261",
     徳島県: "#2A9D8F",
     愛媛県: "#E76F51",
-    高知県: "#264653",
+    高知県: "#6B7280",
   };
 
   const regionLinks = {
     香川県: "/takamatsu",
     徳島県: "/tokushima",
-    愛媛県: "/ehime",
-    高知県: "#", // 預設未開放
+    愛媛県: "/matsuyama",
+    高知県: null, // 禁用跳轉
   };
 
-  // 手動指定每個縣市的文字標籤位置
   const labelPositions = {
     香川県: [134.0, 34.2],
     徳島県: [134.29, 33.87],
     愛媛県: [132.9, 33.7],
-    高知県: [133.5, 33.35],
+    高知県: [133.5, 33.65],
   };
 
   return (
@@ -48,32 +47,48 @@ export default function ShikokuMap() {
             geographies.map((geo) => {
               const name = geo.properties.N03_001;
               const coords = labelPositions[name] || [133.8, 33.6];
+              const isClickable = !!regionLinks[name];
 
               return (
-                <g key={geo.rsmKey} className="group">
+                <g
+                  key={geo.rsmKey}
+                  className={isClickable ? "group" : ""}
+                >
                   <Geography
                     geography={geo}
-                    onClick={() =>
-                      regionLinks[name] && navigate(regionLinks[name])
-                    }
+                    onClick={() => {
+                      if (isClickable) navigate(regionLinks[name]);
+                    }}
                     style={{
                       default: {
                         fill: regionColors[name] || "#ccc",
                         outline: "none",
                       },
-                      hover: {
-                        fill: "#f0e68c",
-                        cursor: "pointer",
-                      },
+                      hover: isClickable
+                        ? {
+                            fill: "#f0e68c",
+                            cursor: "pointer",
+                            outline: "none",
+                          }
+                        : {
+                            fill: regionColors[name] || "#ccc",
+                            cursor: "default",
+                            outline: "none",
+                          },
                       pressed: {
-                        fill: "#e76f51",
+                        fill: isClickable ? "#e76f51" : regionColors[name],
+                        outline: "none",
                       },
                     }}
                   />
                   <Marker coordinates={coords}>
                     <text
                       textAnchor="middle"
-                      className="transition-transform duration-300 group-hover:scale-110"
+                      className={
+                        isClickable
+                          ? "transition-transform duration-300 group-hover:scale-110"
+                          : ""
+                      }
                       style={{
                         fontSize: 10,
                         fill: "#111",

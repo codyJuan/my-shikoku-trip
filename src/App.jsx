@@ -5,10 +5,12 @@ import Takamatsu from "./pages/Takamatsu";
 import Tokushima from "./pages/Tokushima";
 import Matsuyama from "./pages/Matsuyama";
 import Food from "./pages/Food";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         {/* 整站通用 Layout */}
         <Route element={<Layout />}>

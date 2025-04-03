@@ -10,7 +10,6 @@ const foodData = [
       location: "小豆島橄欖公園",
       googleMapUrl: "https://www.google.com/maps?q=小豆島橄欖公園",
       days: ["2025-01-05"],
-      imagePositionPercent: 20  // 0 = bottom, 100 = top
     },
     {
       id: "Shodoshima-noodle",

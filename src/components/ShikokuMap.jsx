@@ -15,7 +15,7 @@ export default function ShikokuMap() {
     香川県: "#F4A261",
     徳島県: "#2A9D8F",
     愛媛県: "#E76F51",
-    高知県: "#6B7280",
+    高知県: "#A9A9A9",
   };
 
   const regionLinks = {

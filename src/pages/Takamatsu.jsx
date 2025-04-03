@@ -1,7 +1,13 @@
 import CityIntro from "../components/CityIntro";
-import FoodForDay from "../components/FoodForDay";
+import DayCard from "../components/DayCard";
 
 export default function Takamatsu() {
+  const days = [
+    { day: "Day1", image: "./images/day1-nav.jpeg", link: "/day1" },
+    { day: "Day2", image: "./images/day2-nav.jpeg", link: "/day2" },
+    { day: "Day3", image: "./images/day3-1-nav.jpeg", link: "/day3" },
+  ];
+
   return (
     <div className="bg-[#fdf6ef] py-12 px-4 font-serif">
       {/* 城市介紹區塊 */}
@@ -16,8 +22,15 @@ export default function Takamatsu() {
         ]}
       />
 
-      {/* 當天吃了什麼（來自 foodData） */}
-      <FoodForDay date="2025-01-07" />
+      {/* 行程卡片區塊 */}
+      <div
+        id="day-cards" 
+        className="max-w-5xl mx-auto pt-10 mt-12 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 font-serif"
+      >
+        {days.map((item) => (
+          <DayCard key={item.day} image={item.image} day={item.day} link={item.link} />
+        ))}
+      </div>
     </div>
   );
 }

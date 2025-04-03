@@ -48,7 +48,12 @@ function ItineraryCard({ item }) {
                 src={img.src}
                 alt={`${item.title} ${i + 1}`}
                 className="w-full h-48 object-cover cursor-pointer"
-                style={{ objectPosition: img.position || "top" }}
+                style={{
+                  objectPosition:
+                    typeof img.position === "number"
+                      ? `center ${img.position}%`
+                      : img.position || "center",
+                }}
                 onClick={() => setLightboxOpen(true)}
               />
             </div>

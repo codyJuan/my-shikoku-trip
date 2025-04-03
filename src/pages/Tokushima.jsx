@@ -1,7 +1,13 @@
 import ItinerarySection from "../components/ItinerarySection";
 import CityIntro from "../components/CityIntro";
+import DayCard from "../components/DayCard";
 
 export default function Ehime() {
+  const days = [
+    { day: "Day3", imageUrl: "/images/day3-nav.jpeg" },
+    { day: "Day4", imageUrl: "/images/day4-nav.jpeg" },
+    { day: "Day5", imageUrl: "/images/day5-nav.jpeg" },
+  ];
   const itineraryByDay = [
     {
       day: "Day 6 — 2025/1/9",
@@ -45,9 +51,17 @@ export default function Ehime() {
         ]}
       />
       
-      {itineraryByDay.map((day, idx) => (
+      <div
+        id="day-cards"  
+        className="max-w-5xl mx-auto pt-10 mt-12 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 font-serif"
+      >
+        {days.map((item) => (
+          <DayCard key={item.day} image={item.image} day={item.day} link={item.link} />
+        ))}
+      </div>
+      {/* {itineraryByDay.map((day, idx) => (
         <ItinerarySection key={idx} title={day.day} items={day.items} />
-      ))}
+      ))} */}
     </div>
   );
 }

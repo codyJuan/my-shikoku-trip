@@ -1,7 +1,13 @@
 import ItinerarySection from "../components/ItinerarySection";
 import CityIntro from "../components/CityIntro";
+import DayCard from "../components/DayCard";
 
 export default function matsuyama() {
+  const days = [
+    { day: "Day5", imageUrl: "/images/day5-nav.jpeg" },
+    { day: "Day6", imageUrl: "/images/day6-nav.jpeg" },
+    { day: "Day7", imageUrl: "/images/day7-nav.jpeg" },
+  ];
   const itineraryByDay = [
     {
       day: "Day 6 — 2025/1/9",
@@ -58,7 +64,6 @@ export default function matsuyama() {
   ];
   return (
     <div className="bg-[#fdf6ef] py-12 px-4 font-serif">
-
       <div className="max-w-6xl mx-auto pt-5 grid grid-cols-1 md:grid-cols-12 gap-10 md:items-end">
         <div className="md:col-span-5">
           <img
@@ -81,9 +86,18 @@ export default function matsuyama() {
           </p>
         </div>
       </div>
-      {itineraryByDay.map((day, idx) => (
+
+      <div
+        id="day-cards"  
+        className="max-w-5xl mx-auto pt-10 mt-12 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 font-serif"
+      >
+        {days.map((item) => (
+          <DayCard key={item.day} image={item.image} day={item.day} link={item.link} />
+        ))}
+      </div>
+      {/* {itineraryByDay.map((day, idx) => (
         <ItinerarySection key={idx} title={day.day} items={day.items} />
-      ))}
+      ))} */}
     </div>
   );
 }

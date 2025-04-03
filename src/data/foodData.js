@@ -3,7 +3,9 @@ const foodData = [
       id: "olive-ice-cream",
       name: "橄欖霜淇淋",
       type: "冰品",
-      images: ["./images/food/Shodoshima-olive-ice-cream.jpeg"],
+      images: [
+        { src: "./images/food/Shodoshima-olive-ice-cream.jpeg", position: 30},
+      ],
       description: "小豆島限定，橄欖香氣淡雅",
       location: "小豆島橄欖公園",
       googleMapUrl: "https://www.google.com/maps?q=小豆島橄欖公園",

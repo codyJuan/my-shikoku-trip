@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/my-shikoku-trip/static/css/main.53e1d1f8.css",
-    "main.js": "/my-shikoku-trip/static/js/main.ad7a4a2d.js",
+    "main.css": "/my-shikoku-trip/static/css/main.7b688f38.css",
+    "main.js": "/my-shikoku-trip/static/js/main.b3aa75ae.js",
+    "static/media/shikoku-merged.geojson": "/my-shikoku-trip/static/media/shikoku-merged.1c00b7a12c105a970010.geojson",
     "index.html": "/my-shikoku-trip/index.html",
-    "main.53e1d1f8.css.map": "/my-shikoku-trip/static/css/main.53e1d1f8.css.map",
-    "main.ad7a4a2d.js.map": "/my-shikoku-trip/static/js/main.ad7a4a2d.js.map"
+    "main.7b688f38.css.map": "/my-shikoku-trip/static/css/main.7b688f38.css.map",
+    "main.b3aa75ae.js.map": "/my-shikoku-trip/static/js/main.b3aa75ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.53e1d1f8.css",
-    "static/js/main.ad7a4a2d.js"
+    "static/css/main.7b688f38.css",
+    "static/js/main.b3aa75ae.js"
   ]
 }

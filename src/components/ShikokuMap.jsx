@@ -7,6 +7,7 @@ import {
 } from "react-simple-maps";
 import { useNavigate } from "react-router-dom";
 import shikokuGeo from "../data/shikoku-merged.geojson";
+import { useMediaQuery } from "react-responsive"; // 新增
 
 export default function ShikokuMap() {
   const navigate = useNavigate();
@@ -32,16 +33,18 @@ export default function ShikokuMap() {
     高知県: [133.5, 33.65],
   };
 
+  const isMobile = useMediaQuery({ maxWidth: 640 }); // tailwind sm
+
   return (
     <div className="flex justify-center items-center -mb-20">
-      <ComposableMap
-        projection="geoMercator"
-        projectionConfig={{
-          scale: 11000,
-          center: [133.4, 33.45],
-        }}
-        style={{ width: "100%", height: "auto" }}
-      >
+        <ComposableMap
+          projection="geoMercator"
+          projectionConfig={{
+            scale: isMobile ? 14000 : 11000,
+            center: isMobile ? [133.4, 33.6] : [133.4, 33.45],
+          }}
+          style={{ width: "100%", height: "auto" }}
+        >
         <Geographies geography={shikokuGeo}>
           {({ geographies }) =>
             geographies.map((geo) => {
@@ -90,7 +93,7 @@ export default function ShikokuMap() {
                           : ""
                       }
                       style={{
-                        fontSize: 10,
+                        fontSize: isMobile ? 18 : 10,
                         fill: "#111",
                         pointerEvents: "none",
                         fontWeight: "bold",

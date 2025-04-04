@@ -16,7 +16,7 @@ export default function Home() {
         <p>請透過下方地圖探索各城市的故事，並感受我們在旅途中捕捉的瞬間。</p>
       </div>
 
-      <div id="shikoku-map">
+      <div id="shikoku-map" className="mb-10">
         <ShikokuMap />
       </div>
     </div>

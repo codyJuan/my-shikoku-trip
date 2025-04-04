@@ -4,8 +4,16 @@ import "keen-slider/keen-slider.min.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import itineraryData from "../data/itineraryData.js";
 
-export default function ItinerarySection({ title, items }) {
+export default function ItinerarySection({ title, dates }) {
+  // 篩選符合日期的行程卡片
+  const items = itineraryData.filter((item) =>
+    dates.some((date) => item.days?.includes(date))
+  );
+
+  if (items.length === 0) return null;
+
   return (
     <section className="max-w-6xl mx-auto px-4 mt-12">
       <h2 className="text-2xl font-bold text-[#504339] mb-6 font-serif">{title}</h2>
@@ -30,7 +38,7 @@ function ItineraryCard({ item }) {
     },
   });
 
-  // 支援：images 是 array of string 或 object
+  // 支援 images 為 string 或 object 並含 position 設定
   const parsedImages = (item.images || []).map((img) =>
     typeof img === "string" ? { src: img } : img
   );
@@ -39,7 +47,6 @@ function ItineraryCard({ item }) {
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
-      {/* 圖片滑動區 */}
       <div className="relative">
         <div ref={sliderRef} className="keen-slider">
           {parsedImages.map((img, i) => (
@@ -60,7 +67,6 @@ function ItineraryCard({ item }) {
           ))}
         </div>
 
-        {/* 左右按鈕 */}
         {hasMultipleImages && (
           <>
             <button
@@ -80,7 +86,6 @@ function ItineraryCard({ item }) {
           </>
         )}
 
-        {/* 小圓點 */}
         {hasMultipleImages && (
           <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
             {parsedImages.map((_, i) => (
@@ -97,7 +102,6 @@ function ItineraryCard({ item }) {
         )}
       </div>
 
-      {/* Lightbox 預覽 */}
       <Lightbox
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
@@ -105,7 +109,6 @@ function ItineraryCard({ item }) {
         slides={parsedImages.map((img) => ({ src: img.src }))}
       />
 
-      {/* 文字區 */}
       <div className="p-4">
         <h3 className="text-lg font-semibold text-[#504339]">{item.title}</h3>
         {item.date && <p className="text-sm text-gray-500">{item.date}</p>}

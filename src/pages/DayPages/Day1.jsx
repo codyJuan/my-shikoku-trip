@@ -1,70 +1,8 @@
-// ✅ 修改後的 Day1.jsx
+// src/pages/DayPages/Day1.jsx
 import ShikokuMapSmall from "../../components/ShikokuMapSmall";
 import ItinerarySection from "../../components/ItinerarySection";
 import FoodForDay from "../../components/FoodForDay";
 import DayNavigator from "../../components/DayNavigator";
-
-const itineraryByDay = [
-  {
-    // day: "上午：小豆島橄欖公園",
-    items: [
-      {
-        title: "小豆島橄欖公園",
-        description: "沿著橄欖樹林漫步，感受地中海風情。",
-        images: [
-          {
-            src: "./images/takamatsu/takamatsu-olive-park.jpeg",
-            position: "bottom"
-          },
-          {
-            src: "./images/takamatsu/takamatsu-olive-broom.jpeg",
-            position: "bottom"
-          },
-          {
-            src: "./images/takamatsu/takamatsu-olive-witch.jpeg",
-            position: 45
-          },
-        ],
-      },
-      {
-        title: "醬油之鄉",
-        description: "擁有百年歷史的釀造工廠，空氣中飄著濃濃醬香，感受小豆島的職人文化。",
-        images: [
-          {
-            src: "./images/takamatsu/takamatsu-olive-soy-1.jpeg",
-            position: 50
-          },
-          {
-            src: "./images/takamatsu/takamatsu-olive-soy-2.jpeg",
-            position: 40
-          },
-          {
-            src: "./images/takamatsu/takamatsu-olive-soy-3.jpeg",
-            position: 30
-          },
-        ],
-      },
-      {
-        title: "草壁港",
-        description: "跟可愛的小豆島橄欖公車合照 🚌🫒📸",
-        images: [
-          {
-            src: "./images/takamatsu/takamatsu-port-1.jpeg",
-            position: 40
-          },
-          {
-            src: "./images/takamatsu/takamatsu-port-2.jpeg",
-            position: 40
-          },
-          {
-            src: "./images/takamatsu/takamatsu-port-3.jpeg",
-            position: 30
-          },
-        ],
-      },
-    ],
-  },
-];
 
 export default function Day1() {
   return (
@@ -82,13 +20,13 @@ export default function Day1() {
           </div>
         </div>
       </div>
-
-      {itineraryByDay.map((day, idx) => (
-        <ItinerarySection key={idx} title={day.day} items={day.items} />
-      ))}
+      
+      <ItinerarySection
+        dates={["2025-01-05"]}
+      />
 
       <div className="mt-16">
-        <FoodForDay date="2025-01-05" />
+        <FoodForDay dates={["2025-01-05"]} />
       </div>
 
       <div className="mt-20 max-w-3xl mx-auto text-[#504339] text-lg leading-relaxed">

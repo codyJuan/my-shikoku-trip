@@ -4,58 +4,9 @@ import ItinerarySection from "../../components/ItinerarySection";
 import FoodForDay from "../../components/FoodForDay";
 import DayNavigator from "../../components/DayNavigator";
 
-const itineraryByDay = [
-  {
-    items: [
-      {
-        title: "丸龜城",
-        description: "沿著陡坡爬上壯觀石垣，在至高處眺望瀨戶內風光。",
-        images: [
-          {
-            src: "./images/takamatsu/takamatsu-castle-1.jpeg",
-            position: 50
-          },
-          {
-            src: "./images/takamatsu/takamatsu-castle-2.jpeg",
-            position: 70
-          },
-          {
-            src: "./images/takamatsu/takamatsu-castle-3.jpeg",
-            position: 45
-          },
-        ],
-      },
-      {
-        title: "金刀比羅宮",
-        description: "在霧雨中挑戰785階石梯，神社籠罩薄霧，更添神秘與莊嚴氣息。",
-        images: [
-          {
-            src: "./images/takamatsu/takamatsu-temple-1.jpeg",
-            position: 50
-          },
-          {
-            src: "./images/takamatsu/takamatsu-temple-2.jpeg",
-            position: 40
-          },
-          {
-            src: "./images/takamatsu/takamatsu-temple-3.jpeg",
-            position: 50
-          },
-          {
-            src: "./images/takamatsu/takamatsu-temple-4.jpeg",
-            position: 60
-          },
-        ],
-      },
-    ],
-  },
-
-];
-
 export default function Day2() {
   return (
     <div className="bg-[#fdf6ef] py-12 mt-12 px-4 font-serif">
-      {/* 上方區塊：標題與地圖置中排版 */}
       <div className="max-w-4xl mx-auto text-center space-y-2 mb-12">
         <p className="text-sm text-[#888]">丸龜城・金刀比羅宮</p>
         <h1 className="text-4xl font-bold text-[#504339]">Day 2</h1>
@@ -71,13 +22,13 @@ export default function Day2() {
       </div>
 
       {/* 行程區塊 */}
-      {itineraryByDay.map((day, idx) => (
-        <ItinerarySection key={idx} title={day.day} items={day.items} />
-      ))}
+      <ItinerarySection
+        dates={["2025-01-06"]}
+      />
 
       {/* 當天吃了什麼 */}
       <div className="mt-16">
-        <FoodForDay date="2025-01-06" />
+        <FoodForDay dates={["2025-01-06"]} />
       </div>
 
       {/* 心得筆記 */}

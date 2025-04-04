@@ -25,7 +25,7 @@ export default function FoodForDay({ date }) {
   if (foods.length === 0) return null;
 
   return (
-    <section className="max-w-5xl mx-auto px-4 mt-12 font-serif text-[#504339]">
+    <section className="max-w-6xl mx-auto pt-1 px-4 py-12 font-serif text-[#504339]">
       <h2 className="text-2xl font-bold mb-4">🍱 當天吃了這些</h2>
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {foods.map((food) => (

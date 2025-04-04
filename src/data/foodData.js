@@ -87,6 +87,69 @@ const foodData = [
       googleMapUrl: "https://maps.app.goo.gl/uewS5mY54hogVR837",
       days: ["2025-01-05"],
     },
+    {
+      id: "takamatsu-mc",
+      name: "麥當勞鬆餅堡",
+      type: "其他",
+      images: [
+        { src: "./images/food/takamatsu-mc.jpeg", position: 30},
+      ],
+      description: "秒殺鬆餅堡，在這裡輕鬆吃得到，悠閒早晨的完美開場。",
+      location: "高松兵庫町商店街",
+      googleMapUrl: "https://maps.app.goo.gl/ibjfjTFochKfmD8P6",
+      days: ["2025-01-06"],
+    },
+    {
+      id: "takamatsu-udon",
+      name: "麵處 綿谷",
+      type: "烏龍麵",
+      images: [
+        { src: "./images/food/takamatsu-udon.jpeg", position: 30},
+      ],
+      description: "丸龜人的日常烏龍麵。牛肉鋪滿整碗，炸物自選、蔥花隨加，豪邁又滿足。",
+      location: "丸龜",
+      googleMapUrl: "https://maps.app.goo.gl/CqVw5KmFG6z9jShc7",
+      days: ["2025-01-06"],
+    },
+    {
+      id: "takamatsu-ramen-bugs",
+      name: "拉面锡虫",
+      type: "拉麵",
+      images: [
+        { src: "./images/food/takamatsu-ramen-bugs-1.jpeg", position: 30},
+        { src: "./images/food/takamatsu-ramen-bugs-2.jpeg", position: 25},
+        { src: "./images/food/takamatsu-ramen-bugs-3.jpeg", position: 15},
+      ],
+      description: "清爽卻有深度的煮干湯頭，沒有海腥味，是一碗水準之上的拉麵。",
+      location: "金昆羅街道",
+      googleMapUrl: "https://maps.app.goo.gl/7K2A3Svvnj3kQQfNA",
+      days: ["2025-01-06"],
+    },
+    {
+      id: "takamatsu-mochi",
+      name: "和三盆糖蕨餅",
+      type: "其他",
+      images: [
+        { src: "./images/food/takamatsu-mochi-1.jpeg", position: 40},
+        { src: "./images/food/takamatsu-mochi-2.jpeg", position: 55},
+      ],
+      description: "和三盆糖製成的蕨餅，Q彈清甜，一吃驚豔，後悔沒多買幾盒。",
+      location: "丸龜町商店街",
+      googleMapUrl: "https://maps.app.goo.gl/DG3QQK8DM54PRmXY9",
+      days: ["2025-01-06"],
+    },
+    {
+      id: "takamatsu-coolish",
+      name: "Coolish",
+      type: "冰品",
+      images: [
+        { src: "./images/food/takamatsu-coolish.jpeg", position: 35},
+      ],
+      description: "台灣捨不得買，在日本當水喝，舒服！",
+      location: "マルナカ 田町店",
+      googleMapUrl: "https://maps.app.goo.gl/uewS5mY54hogVR837",
+      days: ["2025-01-06"],
+    },
 
   ];
   

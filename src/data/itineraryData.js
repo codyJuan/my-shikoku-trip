@@ -130,12 +130,12 @@ const itineraryData = [
     description: "走進德島的舞蹈文化中心，親身感受阿波舞的歷史與律動。",
     images: [
       {
-        src: "./images/tokushima/tokushima-dance-1.jpeg",
-        position: 50
+        src: "./images/tokushima/tokushima-dance-3.jpeg",
+        position: 65
       },
       {
-        src: "./images/tokushima/tokushima-dance-3.jpeg",
-        position: 60
+        src: "./images/tokushima/tokushima-dance-1.jpeg",
+        position: 50
       },
       {
         src: "./images/tokushima/tokushima-dance-4.jpeg",

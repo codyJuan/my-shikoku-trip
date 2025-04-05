@@ -32,7 +32,7 @@ export default function Day2() {
       </div>
 
       {/* 心得筆記 */}
-      <div className="mt-20 max-w-3xl mx-auto text-[#504339] text-lg leading-relaxed">
+      <div className="mt-10 max-w-3xl mx-auto text-[#504339] text-lg leading-relaxed">
         <h2 className="text-2xl font-bold mb-4">📒 Day 2 心得筆記</h2>
         <p>
           這天雖然陰雨綿綿，但氣溫涼爽，是很適合健走的一天。早上我們來到丸龜城，沿著陡坡一路往上，雨天讓石階變得有點濕滑，下坡時尤其驚險，還好入口提供拐杖可以借用。雖然最後沒有進天守閣，但山頂風景遼闊，能俯瞰丸龜市與遠方海景，只可惜照片不小心誤刪了，變成一段只能用回憶保存的美景。<br /><br />

@@ -29,7 +29,7 @@ export default function Day1() {
         <FoodForDay dates={["2025-01-05"]} />
       </div>
 
-      <div className="mt-20 max-w-3xl mx-auto text-[#504339] text-lg leading-relaxed">
+      <div className="mt-10 max-w-3xl mx-auto text-[#504339] text-lg leading-relaxed">
         <h2 className="text-2xl font-bold mb-4">📒 Day 1 心得筆記</h2>
         <p>
         這趟小豆島之旅充滿了意外與驚喜。為了搭上前往小豆島的船，我們特地早起，卻親眼看著船從眼前駛離，下一班還得再等一個小時。沒想到回程時也發生一樣的情況，在島上又多待了一個小時。不過旅行的樂趣，也正是在這些不確定與插曲中展現出來的吧！<br /><br />

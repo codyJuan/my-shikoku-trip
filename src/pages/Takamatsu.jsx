@@ -1,7 +1,9 @@
+// src/pages/Takamatsu.jsx
 import CityIntro from "../components/CityIntro";
 import DayCard from "../components/DayCard";
 import ItinerarySection from "../components/ItinerarySection";
 import FoodForDay from "../components/FoodForDay";
+import HotelCard from "../components/HotelCard";
 
 export default function Takamatsu() {
   const days = [
@@ -23,27 +25,42 @@ export default function Takamatsu() {
           "鄰近的小豆島則以橄欖聞名，在陽光與海風中散發著地中海的氣息。橄欖、醬油，與島上的溫柔步調，讓人一不小心就想停留久一點。",
         ]}
       />
-      
+
+      <HotelCard
+        name="ゲストハウス ROOASiS 常磐町 301"
+        link="https://maps.app.goo.gl/xbDiVqYhVAPjbP9K6"
+      />
+
+      {/* Day 行程卡片 */}
       <div
-        id="day-cards" 
+        id="day-cards"
         className="max-w-5xl mx-auto pt-10 mt-12 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 font-serif"
       >
         {days.map((item) => (
-          <DayCard key={item.day} image={item.image} day={item.day} link={item.link} />
+          <DayCard
+            key={item.day}
+            image={item.image}
+            day={item.day}
+            link={item.link}
+          />
         ))}
       </div>
 
+      {/* 景點記錄 */}
       <div className="mt-16">
         <ItinerarySection
           title="🏯 高松景點紀錄"
-          dates={["2025-01-05", "2025-01-06", "2025-01-07-1"] }
+          dates={["2025-01-05", "2025-01-06", "2025-01-07-1"]}
         />
       </div>
 
+      {/* 美食記錄 */}
       <div className="mt-16">
-        <FoodForDay dates={["2025-01-05", "2025-01-06", "2025-01-07-1"]} title="🍴 高松美食紀錄"/>
+        <FoodForDay
+          dates={["2025-01-05", "2025-01-06", "2025-01-07-1"]}
+          title="🍴 高松美食紀錄"
+        />
       </div>
-      
     </div>
   );
 }

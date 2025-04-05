@@ -2,6 +2,7 @@ import CityIntro from "../components/CityIntro";
 import DayCard from "../components/DayCard";
 import ItinerarySection from "../components/ItinerarySection";
 import FoodForDay from "../components/FoodForDay";
+import HotelCard from "../components/HotelCard";
 
 export default function Ehime() {
   const days = [
@@ -23,6 +24,11 @@ export default function Ehime() {
         ]}
       />
       
+      <HotelCard
+        name="德島克萊門特JR酒店"
+        link="https://maps.app.goo.gl/XURLGF6kovLEU6N39"
+      />
+
       <div
         id="day-cards" 
         className="max-w-5xl mx-auto pt-10 mt-12 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 font-serif"

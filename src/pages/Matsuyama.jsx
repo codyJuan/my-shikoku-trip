@@ -1,6 +1,7 @@
 import ItinerarySection from "../components/ItinerarySection";
 import CityIntro from "../components/CityIntro";
 import DayCard from "../components/DayCard";
+import HotelCard from "../components/HotelCard";
 
 export default function matsuyama() {
   const days = [
@@ -86,6 +87,11 @@ export default function matsuyama() {
           </p>
         </div>
       </div>
+
+      <HotelCard
+        name="Smile Hotel - Matsuyama"
+        link="hhttps://maps.app.goo.gl/pdWFgmNLeSp8ZjPi9"
+      />
 
       <div
         id="day-cards"  

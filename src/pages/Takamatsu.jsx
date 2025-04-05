@@ -36,12 +36,12 @@ export default function Takamatsu() {
       <div className="mt-16">
         <ItinerarySection
           title="🏯 高松景點紀錄"
-          dates={["2025-01-05", "2025-01-06", "2025-01-07"] }
+          dates={["2025-01-05", "2025-01-06", "2025-01-07-1"] }
         />
       </div>
 
       <div className="mt-16">
-        <FoodForDay dates={["2025-01-05", "2025-01-06", "2025-01-07"]} title="🍴 高松美食紀錄"/>
+        <FoodForDay dates={["2025-01-05", "2025-01-06", "2025-01-07-1"]} title="🍴 高松美食紀錄"/>
       </div>
       
     </div>

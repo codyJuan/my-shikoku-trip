@@ -1,43 +1,15 @@
-import ItinerarySection from "../components/ItinerarySection";
 import CityIntro from "../components/CityIntro";
 import DayCard from "../components/DayCard";
+import ItinerarySection from "../components/ItinerarySection";
+import FoodForDay from "../components/FoodForDay";
 
 export default function Ehime() {
   const days = [
-    { day: "Day3", imageUrl: "/images/day3-nav.jpeg" },
-    { day: "Day4", imageUrl: "/images/day4-nav.jpeg" },
-    { day: "Day5", imageUrl: "/images/day5-nav.jpeg" },
+    { day: "Day3", image: "./images/day3-2-nav.jpeg", link: "/day3"  },
+    { day: "Day4", image: "./images/day4-nav.jpeg", link: "/day4"  },
+    { day: "Day5", image: "./images/day5-1-nav.jpeg", link: "/day5"  },
   ];
-  const itineraryByDay = [
-    {
-      day: "Day 6 — 2025/1/9",
-      items: [
-        {
-          title: "梅津寺站看夕陽",
-          images: [
-            "./images/ehime/ehime-beach.jpeg",
-            "./images/ehime/ehime-station.gif",
-          ],
-          description: "從月台看出去剛好黃昏，很寧靜。推薦一定要來拍照！",
-        },
-      ],
-    },
-    {
-      day: "Day 7 — 2025/1/10",
-      items: [
-        {
-          title: "道後溫泉本館",
-          images: [
-            {
-              src: "./images/ehime/ehime-onsen1.jpeg",
-              position: "bottom"
-            },
-          ],
-          description: "據說是《神隱少女》靈感來源的溫泉，本館旁邊有泡腳池，走累了剛好可以泡泡腳、放鬆一下！",
-        },
-      ],
-    },
-  ];
+
   return (
     <div className="bg-[#fdf6ef] py-12 px-4 font-serif">
       <CityIntro
@@ -52,16 +24,24 @@ export default function Ehime() {
       />
       
       <div
-        id="day-cards"  
+        id="day-cards" 
         className="max-w-5xl mx-auto pt-10 mt-12 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 font-serif"
       >
         {days.map((item) => (
           <DayCard key={item.day} image={item.image} day={item.day} link={item.link} />
         ))}
       </div>
-      {/* {itineraryByDay.map((day, idx) => (
-        <ItinerarySection key={idx} title={day.day} items={day.items} />
-      ))} */}
+
+      <div className="mt-16">
+        <ItinerarySection
+          title="🏯 德島景點紀錄"
+          dates={["2025-01-07-2", "2025-01-08", "2025-01-09-1"] }
+        />
+      </div>
+
+      <div className="mt-16">
+        <FoodForDay dates={["2025-01-07-2", "2025-01-08", "2025-01-09-1"]} title="🍴 德島美食紀錄"/>
+      </div>
     </div>
   );
 }

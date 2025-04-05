@@ -98,6 +98,83 @@ const itineraryData = [
     ],
     days: ["2025-01-06"],
   },
+  {
+    title: "栗林公園",
+    description: "漫步於江戶時代的迴遊式日式庭園，松林倒映在池水中，是高松最優雅的片刻。",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-park-1.jpeg",
+        position: 50
+      },
+      {
+        src: "./images/takamatsu/takamatsu-park-2.jpeg",
+        position: 80
+      },
+      {
+        src: "./images/takamatsu/takamatsu-park-3.jpeg",
+        position: 60
+      },
+      {
+        src: "./images/takamatsu/takamatsu-park-4.jpeg",
+        position: 50
+      },
+      {
+        src: "./images/takamatsu/takamatsu-park-5.jpeg",
+        position: 90
+      },
+    ],
+    days: ["2025-01-07-1"],
+  },
+  {
+    title: "阿波舞會館",
+    description: "走進德島的舞蹈文化中心，親身感受阿波舞的歷史與律動。",
+    images: [
+      {
+        src: "./images/tokushima/tokushima-dance-1.jpeg",
+        position: 50
+      },
+      {
+        src: "./images/tokushima/tokushima-dance-3.jpeg",
+        position: 60
+      },
+      {
+        src: "./images/tokushima/tokushima-dance-4.jpeg",
+        position: 25
+      },
+      {
+        src: "./images/tokushima/tokushima-dance-2.mp4",
+        type: "video" 
+      },
+    ],
+    days: ["2025-01-07-2"],
+  },
+  {
+    title: "眉山纜車",
+    description: "搭纜車登上眉山，在山頂俯瞰德島市景與河川交織，剛好遇到一場細雪，格外難忘。",
+    images: [
+      {
+        src: "./images/tokushima/tokushima-cable-1.jpeg",
+        position: 60
+      },
+      {
+        src: "./images/tokushima/tokushima-cable-2.jpeg",
+        position: 50 
+      },
+      {
+        src: "./images/tokushima/tokushima-cable-3.jpeg",
+        position: 70
+      },
+      {
+        src: "./images/tokushima/tokushima-cable-4.jpeg",
+        position: 40
+      },
+      {
+        src: "./images/tokushima/tokushima-snow.mp4",
+        type: "video"
+      },
+    ],
+    days: ["2025-01-07-2"],
+  },
 ];
   
   export default itineraryData;

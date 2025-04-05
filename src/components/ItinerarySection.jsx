@@ -7,7 +7,6 @@ import "yet-another-react-lightbox/styles.css";
 import itineraryData from "../data/itineraryData.js";
 
 export default function ItinerarySection({ title, dates }) {
-  // 篩選符合日期的行程卡片
   const items = itineraryData.filter((item) =>
     dates.some((date) => item.days?.includes(date))
   );
@@ -38,36 +37,46 @@ function ItineraryCard({ item }) {
     },
   });
 
-  // 支援 images 為 string 或 object 並含 position 設定
-  const parsedImages = (item.images || []).map((img) =>
-    typeof img === "string" ? { src: img } : img
+  const parsedMedia = (item.images || []).map((media) =>
+    typeof media === "string" ? { src: media, type: "image" } : { type: "image", ...media }
   );
 
-  const hasMultipleImages = parsedImages.length > 1;
+  const hasMultipleSlides = parsedMedia.length > 1;
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
       <div className="relative">
         <div ref={sliderRef} className="keen-slider">
-          {parsedImages.map((img, i) => (
+          {parsedMedia.map((media, i) => (
             <div key={i} className="keen-slider__slide">
-              <img
-                src={img.src}
-                alt={`${item.title} ${i + 1}`}
-                className="w-full h-48 object-cover cursor-pointer"
-                style={{
-                  objectPosition:
-                    typeof img.position === "number"
-                      ? `center ${img.position}%`
-                      : img.position || "center",
-                }}
-                onClick={() => setLightboxOpen(true)}
-              />
+              {media.type === "video" ? (
+                <video
+                  controls
+                  className="w-full h-48 object-cover rounded"
+                  style={{ objectPosition: media.position || "center" }}
+                >
+                  <source src={media.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <img
+                  src={media.src}
+                  alt={`${item.title} ${i + 1}`}
+                  className="w-full h-48 object-cover cursor-pointer"
+                  style={{
+                    objectPosition:
+                      typeof media.position === "number"
+                        ? `center ${media.position}%`
+                        : media.position || "center",
+                  }}
+                  onClick={() => setLightboxOpen(true)}
+                />
+              )}
             </div>
           ))}
         </div>
 
-        {hasMultipleImages && (
+        {hasMultipleSlides && (
           <>
             <button
               onClick={() => instanceRef.current?.prev()}
@@ -86,9 +95,9 @@ function ItineraryCard({ item }) {
           </>
         )}
 
-        {hasMultipleImages && (
+        {hasMultipleSlides && (
           <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
-            {parsedImages.map((_, i) => (
+            {parsedMedia.map((_, i) => (
               <button
                 key={i}
                 onClick={() => instanceRef.current?.moveToIdx(i)}
@@ -106,7 +115,9 @@ function ItineraryCard({ item }) {
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
         index={currentSlide}
-        slides={parsedImages.map((img) => ({ src: img.src }))}
+        slides={parsedMedia
+          .filter((media) => media.type !== "video")
+          .map((media) => ({ src: media.src }))}
       />
 
       <div className="p-4">

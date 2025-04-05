@@ -150,6 +150,44 @@ const foodData = [
       googleMapUrl: "https://maps.app.goo.gl/uewS5mY54hogVR837",
       days: ["2025-01-06"],
     },
+    {
+      id: "tokushima-ramen-rock",
+      name: "麺屋 六根",
+      type: "拉麵",
+      images: [
+        { src: "./images/food/tokushima-ramen-rock-1.jpeg", position: 40},
+        { src: "./images/food/tokushima-ramen-rock-2.jpeg", position: 50},
+      ],
+      description: "德島站旁的沾麵專門店，湯頭濃郁、麵條Q彈，還能加湯變成另一種美味。厚切叉燒＋三大片海苔，份量十足超滿足！",
+      location: "德島駛",
+      googleMapUrl: "https://maps.app.goo.gl/UAxxq6ZbZCodmyWx8",
+      days: ["2025-01-07-2"],
+    },
+    {
+      id: "tokushima-ramen-fish",
+      name: "堂の浦",
+      type: "拉麵",
+      images: [
+        { src: "./images/food/tokushima-ramen-fish-1.jpeg", position: 20},
+        { src: "./images/food/tokushima-ramen-fish-2.jpeg", position: 45},
+      ],
+      description: "主打鹽味鯛魚拉麵與明太子奶油拉麵，風味獨特又美味，帶來與德島拉麵不同的驚喜。",
+      location: "德島駛",
+      googleMapUrl: "https://maps.app.goo.gl/gZQaJmYfzBHVZz1Y6",
+      days: ["2025-01-07-2"],
+    },
+    {
+      id: "takamatsu-ice-thunder",
+      name: "雷神冰棒",
+      type: "冰品",
+      images: [
+        { src: "./images/food/tokushima-ice-thunder.jpeg", position: 40},
+      ],
+      description: "把巧克力雷神變成冰棒的神奇存在，外層酥脆、內餡濃郁，吃起來超滿足！",
+      location: "7-ELEVEN JR德島車站前店",
+      googleMapUrl: "https://maps.app.goo.gl/ceehFzWrGPnM1YyVA",
+      days: ["2025-01-07-2"],
+    },
 
   ];
   

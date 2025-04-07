@@ -175,6 +175,44 @@ const itineraryData = [
     ],
     days: ["2025-01-07-2"],
   },
+  {
+    title: "渦之道",
+    description: "沿著橋體延伸出的「渦之道」，從 45 公尺高空俯瞰海流奔騰，感受壯麗又寧靜的自然景觀。",
+    images: [
+      {
+        src: "./images/tokushima/tokushima-bridge-1.jpeg",
+        position: 60
+      },
+      {
+        src: "./images/tokushima/tokushima-bridge-2.jpeg",
+        position: 50 
+      },
+      {
+        src: "./images/tokushima/tokushima-bridge-3.jpeg",
+        position: 45
+      },
+      {
+        src: "./images/tokushima/tokushima-bridge-4.jpeg",
+        position: 10
+      },
+    ],
+    days: ["2025-01-08"],
+  },
+  {
+    title: "Aeon Mall Tokushima",
+    description: "德島最熱鬧的購物中心，從超市到美食街一應俱全，也是德島少數能逛到 UNIQLO 的地方。",
+    images: [
+      {
+        src: "./images/tokushima/tokushima-mall-1.jpeg",
+        position: 50
+      },
+      {
+        src: "./images/tokushima/tokushima-mall-2.jpeg",
+        position: 70
+      },
+    ],
+    days: ["2025-01-08"],
+  },
 ];
   
   export default itineraryData;

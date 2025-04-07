@@ -188,6 +188,57 @@ const foodData = [
       googleMapUrl: "https://maps.app.goo.gl/ceehFzWrGPnM1YyVA",
       days: ["2025-01-07-2"],
     },
+    {
+      id: "takamatsu-fish-rice",
+      name: "渦見茶屋",
+      type: "其他",
+      images: [
+        { src: "./images/food/tokushima-fish-rice-1.jpeg", position: 50},
+        { src: "./images/food/tokushima-fish-rice-2.jpeg", position: 10},
+      ],
+      description: "當日現撈的鳴門鯛，炊飯香氣撲鼻，生魚片鮮甜 Q 彈，是來鳴門不可錯過的在地美味。",
+      location: "鳴門市",
+      googleMapUrl: "https://maps.app.goo.gl/8g3hptHsHiqJCzD8A",
+      days: ["2025-01-08"],
+    },
+    {
+      id: "takamatsu-cake",
+      name: "瀧之燒餅",
+      type: "其他",
+      images: [
+        { src: "./images/food/tokushima-cake.jpeg", position: 25},
+      ],
+      description: "擁有超過 400 年歷史的德島傳統和菓子，外脆內軟、紅豆香甜，還有抹茶和芝麻等口味，推薦一定要來吃！",
+      location: "和田の屋 本店",
+      googleMapUrl: "https://maps.app.goo.gl/HnW8qBBFJn28VVJE9",
+      days: ["2025-01-08"],
+    },
+    {
+      id: "takamatsu-Inotani",
+      name: "中華そば いのたに",
+      type: "拉麵",
+      images: [
+        { src: "./images/food/tokushima-ramen-Inotani.jpeg", position: 50},
+      ],
+      description: "創業超過 50 年的德島拉麵老店，牆上還掛有前首相安倍晉三的簽名。濃厚豚骨醬油湯頭搭配豬肉片與生雞蛋，是最經典的德島拉麵風味。",
+      location: "中華そば いのたに",
+      googleMapUrl: "https://maps.app.goo.gl/jDb2tiMRW6Bi3VbTA",
+      days: ["2025-01-08"],
+    },
+    {
+      id: "takamatsu-snake",
+      name: "超市宵夜",
+      type: "拉麵",
+      images: [
+        { src: "./images/food/tokushima-snake-cheese-bread.jpeg", position: 40},
+        { src: "./images/food/tokushima-snake-rice-ball.jpeg", position: 55},
+        { src: "./images/food/tokushima-snake-ramen.jpeg", position: 60},
+      ],
+      description: "藍紋起司像氣油味❌，麵包配番茄超好吃。紅豆飯糰特別但份量太大，辣拉麵加牛奶後超級濃郁，大推！",
+      location: "イオンモール徳島",
+      googleMapUrl: "https://maps.app.goo.gl/XHwdBeszy18aP2t86",
+      days: ["2025-01-08"],
+    },
 
   ];
   

@@ -68,7 +68,7 @@ export default function matsuyama() {
       <div className="max-w-6xl mx-auto pt-5 grid grid-cols-1 md:grid-cols-12 gap-10 md:items-end">
         <div className="md:col-span-5">
           <img
-            src="./images/matsuyama/matsuyama-cable.jpeg"
+            src="./images/matsuyama/matsuyama-Home.jpeg"
             alt="matsuyama lift view"
             className="rounded-lg shadow-md w-full h-full max-h-[500px] object-cover object-center"
           />

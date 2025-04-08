@@ -57,7 +57,7 @@ const foodData = [
       images: [
         { src: "./images/food/Shodoshima-gelato.jpeg", position: 45},
       ],
-      description: "傳說中最強冰店！米倉改建的港口小店，用在地食材做出像魔法一樣的義式冰淇淋。",
+      description: "傳說中小豆島最強冰店！米倉改建的港口小店，用在地食材做出像魔法一樣的義式冰淇淋。",
       location: "草壁港",
       googleMapUrl: "https://maps.app.goo.gl/xDB6oCpjFm9uBAqXA",
       days: ["2025-01-05"],
@@ -76,13 +76,24 @@ const foodData = [
     },
     {
       id: "takamatsu-night-snake",
-      name: "超市宵夜",
+      name: "炙燒鰹魚刺身（かつおのたたき）",
       type: "其他",
       images: [
         { src: "./images/food/takamatsu-snake-fish.jpeg", position: 45},
+      ],
+      description: "香川名產炙燒鰹魚刺身，表面微焦、內裡柔嫩，風味濃郁，一口吃出炙香與鮮味。可惜略帶一點腥味，不然就完美了！",
+      location: "マルナカ 田町店",
+      googleMapUrl: "https://maps.app.goo.gl/uewS5mY54hogVR837",
+      days: ["2025-01-05"],
+    },
+    {
+      id: "takamatsu-night-snake",
+      name: "黑毛和牛燒肉（肩ロース）",
+      type: "其他",
+      images: [
         { src: "./images/food/takamatsu-snake-beef.jpeg", position: 95},
       ],
-      description: "香川名產炙燒鰹魚刺身，風味濃郁，略帶海味。和牛油脂太豐富，搭配小豆島香料鹽才不會膩口。",
+      description: "超市就能買到的黑毛和牛，油花豐富、入口即化，加點小豆島香料鹽更對味！",
       location: "マルナカ 田町店",
       googleMapUrl: "https://maps.app.goo.gl/uewS5mY54hogVR837",
       days: ["2025-01-05"],
@@ -203,7 +214,7 @@ const foodData = [
     },
     {
       id: "takamatsu-cake",
-      name: "瀧之燒餅",
+      name: "滝の焼餅",
       type: "其他",
       images: [
         { src: "./images/food/tokushima-cake.jpeg", position: 25},
@@ -227,17 +238,87 @@ const foodData = [
     },
     {
       id: "takamatsu-snake",
-      name: "超市宵夜",
-      type: "拉麵",
+      name: "蕃茄 × 麵包 × 藍紋起司 × 四國牛乳",
+      type: "其他",
       images: [
         { src: "./images/food/tokushima-snake-cheese-bread.jpeg", position: 40},
-        { src: "./images/food/tokushima-snake-rice-ball.jpeg", position: 55},
-        { src: "./images/food/tokushima-snake-ramen.jpeg", position: 60},
       ],
-      description: "藍紋起司像氣油味❌，麵包配番茄超好吃。紅豆飯糰特別但份量太大，辣拉麵加牛奶後超級濃郁，大推！",
+      description: "超市買的麵包夾番茄配藍紋起司，再加一杯四國牛乳，就是晚上簡單又幸福的時光。可惜藍紋起司有汽油味❌，換別款起司就完美了！",
       location: "イオンモール徳島",
       googleMapUrl: "https://maps.app.goo.gl/XHwdBeszy18aP2t86",
       days: ["2025-01-08"],
+    },
+    {
+      id: "takamatsu-snake",
+      name: "黃豆粉御萩（きな粉おはぎ）",
+      type: "其他",
+      images: [
+        { src: "./images/food/tokushima-snake-rice-ball.jpeg", position: 55},
+      ],
+      description: "外層裹上香烘黃豆粉，內餡是綿密紅豆與Q彈糯米，甜而不膩，是最經典的日式懷舊點心。",
+      location: "イオンモール徳島",
+      googleMapUrl: "https://maps.app.goo.gl/XHwdBeszy18aP2t86",
+      days: ["2025-01-08"],
+    },
+    {
+      id: "takamatsu-snake",
+      name: "蒙古タンメン中本",
+      type: "其他",
+      images: [
+        { src: "./images/food/tokushima-snake-ramen.jpeg", position: 60},
+      ],
+      description: "極辣味噌湯頭搭配 Q 彈捲麵，濃郁中帶豆腐與高麗菜的層次香氣，辣中帶香，加點牛奶更濃，一吃就上癮！",
+      location: "イオンモール徳島",
+      googleMapUrl: "https://maps.app.goo.gl/XHwdBeszy18aP2t86",
+      days: ["2025-01-08"],
+    },
+    {
+      id: "takamatsu-udon",
+      name: "自助烏龍麵 山",
+      type: "烏龍麵",
+      images: [
+        { src: "./images/food/tokushima-udon.jpeg", position: 20},
+      ],
+      description: "早上也能吃到的烏龍麵店！咖哩濃郁、麵條Q彈，海帶鮮香又解膩，四國的烏龍麵果然從不讓人失望！",
+      location: "セルフうどん やま 徳島駅前店",
+      googleMapUrl: "https://maps.app.goo.gl/qpbm21xCbVKsA7aFA",
+      days: ["2025-01-09-1"],
+    },
+    {
+      id: "matsuyama-curry-bread",
+      name: "カレーパンノヒ（咖哩麵包之日）",
+      type: "其他",
+      images: [
+        { src: "./images/food/matsuyama-curry-bread.jpeg", position: 33},
+      ],
+      description: "大阪人氣咖哩麵包專門店，主打外酥內Q、餡料飽滿的進化系咖哩麵包，風味特別又超好吃！",
+      location: "いよてつ髙島屋",
+      googleMapUrl: "https://maps.app.goo.gl/C7UPVyin7NTWXS7M8",
+      days: ["2025-01-09-2"],
+    },
+    {
+      id: "matsuyama-fish",
+      name: "鯛一郎クン 真鯛生魚片",
+      type: "其他",
+      images: [
+        { src: "./images/food/matsuyama-fish.jpeg", position: 65},
+      ],
+      description: "超市也能吃到高品質！鯛一郎クン的真鯛生魚片，Q 彈鮮甜、毫無腥味，超級好吃！",
+      location: "いよてつ髙島屋",
+      googleMapUrl: "https://maps.app.goo.gl/C7UPVyin7NTWXS7M8",
+      days: ["2025-01-09-2"],
+    },
+    {
+      id: "matsuyama-orange",
+      name: "🍊愛媛蜜柑",
+      type: "其他",
+      images: [
+        { src: "./images/food/matsuyama-orange.jpeg", position: 65},
+      ],
+      description: "果皮薄、汁多味甜，是四國人氣水果！品種多樣，風味各有特色，怎麼吃都驚喜！",
+      location: "いよてつ髙島屋",
+      googleMapUrl: "https://maps.app.goo.gl/C7UPVyin7NTWXS7M8",
+      days: ["2025-01-09-2"],
     },
 
   ];

@@ -1,68 +1,16 @@
-import ItinerarySection from "../components/ItinerarySection";
 import CityIntro from "../components/CityIntro";
 import DayCard from "../components/DayCard";
+import ItinerarySection from "../components/ItinerarySection";
+import FoodForDay from "../components/FoodForDay";
 import HotelCard from "../components/HotelCard";
 
 export default function matsuyama() {
   const days = [
-    { day: "Day5", imageUrl: "/images/day5-nav.jpeg" },
-    { day: "Day6", imageUrl: "/images/day6-nav.jpeg" },
-    { day: "Day7", imageUrl: "/images/day7-nav.jpeg" },
+    { day: "Day5", image: "./images/day5-2-nav.jpeg", link: "/day5" },
+    { day: "Day6", image: "./images/day6-nav.jpeg", link: "/day6" },
+    { day: "Day7", image: "./images/day7-nav.jpeg", link: "/day7" },
   ];
-  const itineraryByDay = [
-    {
-      day: "Day 6 — 2025/1/9",
-      items: [
-        {
-          title: "梅津寺站看夕陽",
-          images: [
-            "./images/matsuyama/matsuyama-beach.jpeg",
-            "./images/matsuyama/matsuyama-station.gif",
-          ],
-          description: "從月台看出去剛好黃昏，很寧靜。推薦一定要來拍照！",
-        },
-        {
-          title: "高島屋摩天輪",
-          images: [
-            "./images/matsuyama/matsuyama-wheel.jpeg",
-          ],
-          description: "可以眺望整個松山市區的夜景，很漂亮！",
-        },
-      ],
-    },
-    {
-      day: "Day 7 — 2025/1/10",
-      items: [
-        {
-          title: "道後溫泉本館",
-          images: [
-            {
-              src: "./images/matsuyama/matsuyama-onsen1.jpeg",
-              position: "bottom"
-            },
-            {
-              src: "./images/matsuyama/matsuyama-onsen2.jpeg",
-              position: "bottom"
-            },
-            {
-              src: "./images/matsuyama/matsuyama-onsen3.jpeg",
-              position: "bottom"
-            },
-            {
-              src: "./images/matsuyama/matsuyama-onsen4.jpeg",
-              position: "center"
-            },
-          ],
-          description: "據說是《神隱少女》靈感來源的溫泉，本館旁邊有泡腳池，走累了剛好可以泡泡腳、放鬆一下！",
-        },
-        {
-          title: "松山城纜車",
-          image: "./images/matsuyama-cable.jpg",
-          description: "從上面可以眺望整座城市與遠方大海～",
-        },
-      ],
-    },
-  ];
+  
   return (
     <div className="bg-[#fdf6ef] py-12 px-4 font-serif">
       <div className="max-w-6xl mx-auto pt-5 grid grid-cols-1 md:grid-cols-12 gap-10 md:items-end">
@@ -94,16 +42,24 @@ export default function matsuyama() {
       />
 
       <div
-        id="day-cards"  
+        id="day-cards" 
         className="max-w-5xl mx-auto pt-10 mt-12 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 font-serif"
       >
         {days.map((item) => (
           <DayCard key={item.day} image={item.image} day={item.day} link={item.link} />
         ))}
       </div>
-      {/* {itineraryByDay.map((day, idx) => (
-        <ItinerarySection key={idx} title={day.day} items={day.items} />
-      ))} */}
+
+      <div className="mt-16">
+      <ItinerarySection
+        title="🏯 松山景點紀錄"
+        dates={["2025-01-09-2", "2025-01-10", "2025-01-11"] }
+      />
+    </div>
+
+    <div className="mt-16">
+      <FoodForDay dates={["2025-01-09-2", "2025-01-10", "2025-01-11"]} title="🍴 松山美食紀錄"/>
+    </div>
     </div>
   );
 }

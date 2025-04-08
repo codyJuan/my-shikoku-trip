@@ -8,7 +8,7 @@ export default function Day1() {
   return (
     <div className="bg-[#fdf6ef] py-12 mt-12 px-4 font-serif">
       <div className="max-w-4xl mx-auto text-center space-y-2 mb-12">
-        <p className="text-sm text-[#888]">小豆島・橄欖公園</p>
+        <p className="text-sm text-[#888]">小豆島</p>
         <h1 className="text-4xl font-bold text-[#504339]">Day 1</h1>
         <p className="text-[#777] text-sm">2025.01.05</p>
 

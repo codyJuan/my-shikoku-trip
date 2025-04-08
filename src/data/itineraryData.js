@@ -213,6 +213,70 @@ const itineraryData = [
     ],
     days: ["2025-01-08"],
   },
+  {
+    title: "梅津寺站",
+    description: "梅津寺站月台緊鄰瀨戶內海，視野開闊，海天一色的美景近在眼前，尤其黃昏最為迷人，超適合拍照看海，一定要來！",
+    images: [
+      {
+        src: "./images/matsuyama/matsuyama-beach.jpeg",
+        position: 70
+      },
+      {
+        src: "./images/matsuyama/matsuyama-station.gif",
+        position: 70
+      },
+      {
+        src: "./images/matsuyama/matsuyama-orange-shop.jpeg",
+        position: 50
+      },
+    ],
+    days: ["2025-01-09-2"],
+  },
+  {
+    title: "高島屋摩天輪 Kururin",
+    description: "高島屋頂樓的摩天輪，可 360 度眺望松山城、道後溫泉與瀨戶內海，是松山的超人氣地標。外國遊客還享半價優惠！",
+    images: [
+      {
+        src: "./images/matsuyama/matsuyama-wheel.jpeg",
+        position: 70
+      },
+    ],
+    days: ["2025-01-09-2"],
+  },
+  {
+    title: "松山城",
+    description: "從上面可以眺望整座城市與遠方大海～",
+    images: [
+      {
+        src: "./images/matsuyama/matsuyama-cable..jpeg",
+        position: "bottom"
+      },
+    ],
+    // days: ["2025-01-10"],
+  },
+  {
+    title: "道後溫泉本館",
+    description: "據說是《神隱少女》靈感來源的溫泉，本館旁邊有泡腳池，走累了剛好可以泡泡腳、放鬆一下！",
+    images: [
+      {
+        src: "./images/matsuyama/matsuyama-onsen1.jpeg",
+        position: "bottom"
+      },
+      {
+        src: "./images/matsuyama/matsuyama-onsen2.jpeg",
+        position: "bottom"
+      },
+      {
+        src: "./images/matsuyama/matsuyama-onsen3.jpeg",
+        position: "bottom"
+      },
+      {
+        src: "./images/matsuyama/matsuyama-onsen4.jpeg",
+        position: "center"
+      },
+    ],
+    // days: ["2025-01-10"],
+  },
 ];
   
   export default itineraryData;

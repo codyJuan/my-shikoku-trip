@@ -75,7 +75,7 @@ const foodData = [
       days: ["2025-01-05"],
     },
     {
-      id: "takamatsu-night-snake",
+      id: "takamatsu-fish",
       name: "炙燒鰹魚刺身（かつおのたたき）",
       type: "其他",
       images: [
@@ -87,7 +87,7 @@ const foodData = [
       days: ["2025-01-05"],
     },
     {
-      id: "takamatsu-night-snake",
+      id: "takamatsu-beef",
       name: "黑毛和牛燒肉（肩ロース）",
       type: "其他",
       images: [
@@ -237,7 +237,7 @@ const foodData = [
       days: ["2025-01-08"],
     },
     {
-      id: "takamatsu-snake",
+      id: "tokushima-cheese",
       name: "蕃茄 × 麵包 × 藍紋起司 × 四國牛乳",
       type: "其他",
       images: [
@@ -249,7 +249,7 @@ const foodData = [
       days: ["2025-01-08"],
     },
     {
-      id: "takamatsu-snake",
+      id: "tokushima-rice-ball",
       name: "黃豆粉御萩（きな粉おはぎ）",
       type: "其他",
       images: [
@@ -261,7 +261,7 @@ const foodData = [
       days: ["2025-01-08"],
     },
     {
-      id: "takamatsu-snake",
+      id: "tokushima-ramen",
       name: "蒙古タンメン中本",
       type: "其他",
       images: [
@@ -273,7 +273,7 @@ const foodData = [
       days: ["2025-01-08"],
     },
     {
-      id: "takamatsu-udon",
+      id: "tokushima-udon",
       name: "自助烏龍麵 山",
       type: "烏龍麵",
       images: [

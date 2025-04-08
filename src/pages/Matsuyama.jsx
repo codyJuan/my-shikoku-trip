@@ -38,7 +38,7 @@ export default function matsuyama() {
 
       <HotelCard
         name="Smile Hotel - Matsuyama"
-        link="hhttps://maps.app.goo.gl/pdWFgmNLeSp8ZjPi9"
+        link="https://maps.app.goo.gl/pdWFgmNLeSp8ZjPi9"
       />
 
       <div

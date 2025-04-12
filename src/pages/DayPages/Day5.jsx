@@ -16,7 +16,7 @@ export default function Day5() {
 
         <div className="mt-4 flex justify-center">
           <div className="w-full lg:w-[400px] mt-4">
-            <ShikokuMapSmall highlightRegions={["愛媛県"]} />
+            <ShikokuMapSmall highlightRegions={["徳島県", "愛媛県"]} />
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function Day5() {
       <div className="mt-10 max-w-3xl mx-auto text-[#504339] text-lg leading-relaxed">
         <h2 className="text-2xl font-bold mb-4">📒 Day 5 心得筆記</h2>
         <p>
-        今天從德島移動到松山！一大早在德島車站吃了暖呼呼的烏龍麵當早餐後，搭了四小時的火車一路來到松山。到達時正好趕上夕陽，我們馬上衝去傳說中的梅津寺車站看日落。月台旁邊就是海灘，乾淨的海水配上夕陽，美到無話可說。車站旁還有橘子主題的紀念品店，我們買了橘子鹽和七味粉（超好吃）。<br />
+        今天從德島移動到松山！一大早在德島車站吃了暖呼呼的烏龍麵當早餐後，搭了四小時的火車一路來到松山。到達時正好趕上夕陽，我們馬上衝去傳說中的梅津寺車站看日落。月台旁邊就是海灘，乾淨的海水配上夕陽，美到無話可說。車站旁還有橘子主題的紀念品店，我們買了橘子鹽和七味粉（超好吃）！<br />
         <br />
         晚上去了高島屋頂樓搭摩天輪，15 分鐘內就能將整個松山市的夜景盡收眼底。萬家燈火與遠方山景交織，氣氛寧靜又浪漫，而且外國遊客還享有半價優惠，這樣的體驗真的太值得了！<br />
         <br />

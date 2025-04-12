@@ -1,7 +1,62 @@
 const itineraryData = [
   {
+    title: "飛往四國的日落",
+    description: "抵達高松前拍到的夕陽，機翼在雲海上劃過，這一幕就像幫我們這趟旅程按下開場的快門。",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-sky.jpeg",
+        position: 30
+      },
+    ],
+    days: ["2025-01-04"],
+  },
+  {
+    title: "高松機場接駁巴士",
+    description: "一下飛機就搭上前往高松市區的接駁巴士，大約 40 分鐘就能到高松站，旅行正式開始了！",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-airport-bus.jpeg",
+        position: 50
+      },
+    ],
+    days: ["2025-01-04"],
+  },
+  {
+    title: "高松夜空",
+    description: "在高松的夜裡抬頭一望，竟然能在市區看見這麼多星星。電線橫過天際，卻絲毫不減那份寧靜與美麗，像是旅途中無意間拾起的小驚喜。",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-star.jpeg",
+        position: 30
+      },
+    ],
+    days: ["2025-01-04"],
+  },
+  {
+    title: "栗林超市",
+    description: "旅途中最讓人安心的，是晚上還能隨時補貨的超市。今天晚餐與宵夜全靠它撐場！",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-supermarket.jpeg",
+        position: 40
+      },
+    ],
+    days: ["2025-01-04"],
+  },
+  {
+    title: "琴電（ことでん）",
+    description: "穿越城市與田野的復古電車。琴電是香川縣在地的生活鐵道，也是通往金刀比羅宮的旅人之路。緩緩駛過平交道的那一刻，就像進入了四國的日常時光。",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-train.mp4",
+        type: "video"
+      },
+    ],
+    days: ["2025-01-04"],
+  },
+  {
     title: "小豆島橄欖公園",
-    description: "沿著橄欖樹林漫步，感受地中海風情。",
+    description: "小豆島橄欖公園以地中海風情與橄欖歷史聞名，希臘風車是《魔女宅急便》拍攝地。園內可拍飛天照，還有橄欖霜淇淋與特色郵筒，是小豆島必訪景點！",
     images: [
       {
         src: "./images/takamatsu/takamatsu-olive-park.jpeg",
@@ -20,7 +75,7 @@ const itineraryData = [
   },
   {
     title: "醬油之鄉",
-    description: "擁有百年歷史的釀造工廠，空氣中飄著濃濃醬香，感受小豆島的職人文化。",
+    description: "有百年歷史的釀造工廠，空氣中飄著濃濃醬香，感受小豆島的職人文化。",
     images: [
       {
         src: "./images/takamatsu/takamatsu-olive-soy-1.jpeg",
@@ -36,6 +91,17 @@ const itineraryData = [
       },
     ],
     days: ["2025-01-05"],
+  },
+  {
+    title: "ZAG ZAG",
+    description: "在小豆島的藥妝店 ZAG ZAG 隨手的自拍！雖然是島上的小店，但商品超齊全，日用品、藥品通通有，逛起來一點也不輸市區！",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-zag.jpeg",
+        position: 40
+      },
+    ],
+    days: ["2025-01-05-s"],
   },
   {
     title: "草壁港",
@@ -54,11 +120,11 @@ const itineraryData = [
         position: 30
       },
     ],
-    days: ["2025-01-05"],
+    days: ["2025-01-05-s"],
   },
   {
     title: "丸龜城",
-    description: "沿著陡坡爬上壯觀石垣，在至高處眺望瀨戶內風光。",
+    description: "擁有全日本最高石垣的丸龜城，天守雖小但氣勢十足，優雅的扇形石牆令人驚艷。",
     images: [
       {
         src: "./images/takamatsu/takamatsu-castle-1.jpeg",
@@ -127,7 +193,7 @@ const itineraryData = [
   },
   {
     title: "阿波舞會館",
-    description: "走進德島的舞蹈文化中心，親身感受阿波舞的歷史與律動。",
+    description: "走進德島的舞蹈文化中心，能親自上台體驗阿波舞步！還有展示歷史的博物館、販售特產的物產館，以及通往眉山的纜車站，來德島不可錯過的文化設施。",
     images: [
       {
         src: "./images/tokushima/tokushima-dance-3.jpeg",
@@ -245,18 +311,38 @@ const itineraryData = [
   },
   {
     title: "松山城",
-    description: "從上面可以眺望整座城市與遠方大海～",
+    description: "坐落山頂的松山城，是現存天守之一。可搭吊椅登城，還能試穿武士盔甲、體驗 VR，沉浸式感受濃濃的日本歷史氛圍。",
     images: [
       {
-        src: "./images/matsuyama/matsuyama-cable..jpeg",
-        position: "bottom"
+        src: "./images/matsuyama/matsuyama-catsle-1.jpeg",
+        position: 40
+      },
+      {
+        src: "./images/matsuyama/matsuyama-catsle-2.jpeg",
+        position: 40
+      },
+      {
+        src: "./images/matsuyama/matsuyama-catsle-3.jpeg",
+        position: 40
+      },
+      {
+        src: "./images/matsuyama/matsuyama-catsle-4.jpeg",
+        position: 40
+      },
+      {
+        src: "./images/matsuyama/matsuyama-catsle-5.jpeg",
+        position: 50
+      },
+      {
+        src: "./images/matsuyama/matsuyama-catsle-6.jpeg",
+        position: 50
       },
     ],
-    // days: ["2025-01-10"],
+    days: ["2025-01-10"],
   },
   {
     title: "道後溫泉本館",
-    description: "據說是《神隱少女》靈感來源的溫泉，本館旁邊有泡腳池，走累了剛好可以泡泡腳、放鬆一下！",
+    description: "據說是《神隱少女》取景靈感地，溫泉本館旁有免費泡腳池，走累了剛好放鬆。商店街常可見穿浴衣散步的旅客，充滿溫泉街的獨特氣氛。",
     images: [
       {
         src: "./images/matsuyama/matsuyama-onsen1.jpeg",
@@ -264,18 +350,78 @@ const itineraryData = [
       },
       {
         src: "./images/matsuyama/matsuyama-onsen2.jpeg",
-        position: "bottom"
+        position: 100
       },
       {
         src: "./images/matsuyama/matsuyama-onsen3.jpeg",
-        position: "bottom"
+        position: 70
       },
       {
         src: "./images/matsuyama/matsuyama-onsen4.jpeg",
         position: "center"
       },
+      {
+        src: "./images/matsuyama/matsuyama-onsen5.jpeg",
+        position: 65
+      },
+      {
+        src: "./images/matsuyama/matsuyama-onsen6.jpeg",
+        position: 50
+      },
     ],
-    // days: ["2025-01-10"],
+    days: ["2025-01-10"],
+  },
+  {
+    title: "大街道商店街",
+    description: "松山市最熱鬧的拱廊商店街，百貨、伴手禮、雜貨店林立，從名產到手作通通找得到，雨天也能悠閒漫步其中。",
+    images: [
+      {
+        src: "./images/matsuyama/matsuyama-street.jpeg",
+        position: 45
+      },
+    ],
+    days: ["2025-01-10"],
+  },
+  {
+    title: "特急いしづち",
+    description: "以靈山石鎚山為名的特急列車，行駛於松山與高松之間。銀色車身配藍紋標誌十分搶眼，搭車時記得確認編組，不小心會搭到開往岡山的另一半。",
+    images: [
+      {
+        src: "./images/matsuyama/matsuyama-train-to-takamatsu.jpeg",
+        position: 45
+      },
+    ],
+    days: ["2025-01-11-1"],
+  },
+  {
+    title: "JR高松駛",
+    description: "四國交通的核心車站，連接松山、德島與本州，也可轉船前往小豆島與直島。現代化建築與海港相鄰，是我們旅程的起點與終點。",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-station.jpeg",
+        position: 65
+      },
+    ],
+    days: ["2025-01-11-2"],
+  },
+  {
+    title: "高松機場",
+    description: "跟印象中完全不同，高松機場超級樸素！只有幾個 check-in 櫃台、四個出境窗口，一個安檢機和登機門，小歸小但效率很高。",
+    images: [
+      {
+        src: "./images/takamatsu/takamatsu-airplane-1.jpg",
+        position: 40
+      },
+      {
+        src: "./images/takamatsu/takamatsu-airplane-2.jpeg",
+        position: 40
+      },
+      {
+        src: "./images/takamatsu/takamatsu-airplane-3.jpeg",
+        position: 50
+      },
+    ],
+    days: ["2025-01-11-2"],
   },
 ];
   

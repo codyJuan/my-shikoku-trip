@@ -22,7 +22,7 @@ export default function Day1() {
       </div>
       
       <ItinerarySection
-        dates={["2025-01-05"]}
+        dates={["2025-01-05", "2025-01-05-s"]}
       />
 
       <div className="mt-16">
@@ -41,6 +41,8 @@ export default function Day1() {
       </div>
       <div className="mt-16">
         <DayNavigator
+          prev="/day0"
+          prevLabel="Day 0"
           next="/day2"
           nextLabel="Day 2"
           homeLink="/takamatsu"

@@ -53,12 +53,12 @@ export default function matsuyama() {
       <div className="mt-16">
       <ItinerarySection
         title="🏯 松山景點紀錄"
-        dates={["2025-01-09-2", "2025-01-10", "2025-01-11"] }
+        dates={["2025-01-09-2", "2025-01-10"] }
       />
     </div>
 
     <div className="mt-16">
-      <FoodForDay dates={["2025-01-09-2", "2025-01-10", "2025-01-11"]} title="🍴 松山美食紀錄"/>
+      <FoodForDay dates={["2025-01-09-2", "2025-01-10", "2025-01-11-1"]} title="🍴 松山美食紀錄"/>
     </div>
     </div>
   );
